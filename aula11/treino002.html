@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    País <input type="text" name="country" id="country">
+    <input type="button" value="Verificar" onclick="discovery()">
+    <div class="res">
+    </div>
+    <script>
+        function discovery() {
+            var origin = window.document.getElementById('country')
+            var res = window.document.querySelector('div.res')
+            var nationality = origin.value
+            res.innerHTML = `<p>Seu país de origem é ${nationality}</p>`
+            if (nationality == 'Brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
